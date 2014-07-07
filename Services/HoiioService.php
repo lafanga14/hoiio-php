@@ -1,5 +1,10 @@
 <?php
 
+if (!defined('HoiioService_ROOT')) {
+    define('HoiioService_ROOT', dirname(__FILE__) . '/');
+    require(HoiioService_ROOT . 'lib/Autoloader.php');
+}
+
 function __autoload($class_name) {
     require_once('lib/'. $class_name. '.php');
 }
