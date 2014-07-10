@@ -17,6 +17,7 @@ class HoiioException extends Exception {
     const INTERNAL_SERVER_ERROR         = 'error_internal_server_error';
     const INVALID_TXN_REF               = 'error_invalid_txn_ref';
     const NOT_ALLOWED_FOR_TRIAL         = 'error_not_allowed_for_trial';
+    const INVALID_CURL_CONFIGURATION_OR_TIMEOUT	= 'error_invalid_curl_configuration_or_timeout';
 
     /* Shared error codes */
     const DEST_INVALID                  = 'error_dest_invalid';
