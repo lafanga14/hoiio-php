@@ -46,8 +46,12 @@ class HTTPService {
     private static function parseResult($response) {
         $result = json_decode($response);
 
-        if($result->{'status'} != HoiioException::SUCCESS)
-            throw new HoiioException($result->{'status'});
+		if(empty($result)) {
+			throw new HoiioException("error_invalid_curl_configuration_or_timeout");
+		} else {
+			if($result->{'status'} != HoiioException::SUCCESS)
+				throw new HoiioException($result->{'status'});
+		}
 
         return $result;
     }
