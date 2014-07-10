@@ -23,9 +23,7 @@ class HoiioService_Autoloader
             return FALSE;
         }
 
-        $pClassFilePath = HoiioService_ROOT .
-                          str_replace('_',DIRECTORY_SEPARATOR,$pClassName) .
-                          '.php';
+        $pClassFilePath = HoiioService_ROOT . 'lib/' . $pClassName . '.php';
         if ((file_exists($pClassFilePath) === FALSE) || (is_readable($pClassFilePath) === FALSE)) {
             //    Can't load
             return FALSE;
